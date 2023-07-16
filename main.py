@@ -38,4 +38,4 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True, port=3003)
+    socketio.run(app, host='0.0.0.0', port=3003)
