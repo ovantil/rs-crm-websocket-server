@@ -31,6 +31,10 @@ def handle_cell_update(data):
 @socketio.on('status update')
 def handle_status_update(data):
     emit('status update', data, broadcast=True)
+    
+@app.route('/hello_world')
+def hello_world():
+    return 'Hello, World!'
 
 
 if __name__ == '__main__':
