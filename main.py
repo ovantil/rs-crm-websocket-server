@@ -31,11 +31,13 @@ def handle_cell_update(data):
 @socketio.on('status update')
 def handle_status_update(data):
     emit('status update', data, broadcast=True)
-    
+
+
 @app.route('/hello_world')
 def hello_world():
     return 'Hello, World!'
 
 
 if __name__ == '__main__':
-    socketio.run(app, host='0.0.0.0', port=3003)
+    # If we use port 443, we can use HTTPS.
+    socketio.run(app, host='0.0.0.0', port=443)
