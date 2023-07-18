@@ -39,5 +39,4 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    # If we use port 443, we can use HTTPS.
-    socketio.run(app, host='0.0.0.0', port=443)
+    socketio.run(app, host='0.0.0.0', port=5000)
